@@ -1,4 +1,4 @@
-## app-labs
+## App Labs
 This is a playground for backend technology
 
 ## Stacks
@@ -11,7 +11,7 @@ This is a playground for backend technology
 $ npm install npm -g
 $ npm install —save-dev express
 $ npm install —save body-parser
-$ npm install —save ejs pug express-handlebars
+$ npm install —save ejs
 ```
 
 ## Run
