@@ -8,11 +8,13 @@ This is a playground for backend technology
 
 ## Getting Started
 ```
-$ npm install npm -g
+$ npm install
 $ npm install —save-dev express
 $ npm install —save body-parser
 $ npm install —save ejs pug express-handlebars
 ```
 
 ## Run
+```
 $ node app.js
+```
