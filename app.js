@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const errorController = require('./controllers/error');
-const mongoConnect = require('./util/database').mongoConnect;
+const mongoose = require('mongoose');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -22,7 +22,10 @@ app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 app.use(errorController.get404);
 
-mongoConnect(client => {
-    console.log(client);
-    app.listen(3000); 
-})
+mongoose.connect('mongodb+srv://dbUser:tm4e0PJ46VmOqPBZ@cluster0-0ubpi.mongodb.net/app-labs?retryWrites=true&w=majority')
+    .then(result => {
+        app.listen(3000);
+    })
+    .catch(err => {
+        console.log(err);
+    });
